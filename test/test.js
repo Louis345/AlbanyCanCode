@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-const { add, subtraction, division, multiply } = require('./computation');
+const { add, subtraction, division, multiply } = require('../computation');
 
 describe('computation', () => {
   it('it should add two numbers', () => {
