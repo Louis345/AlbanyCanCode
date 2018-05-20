@@ -1,6 +1,12 @@
 var expect = require('chai').expect;
 
-const { add, subtraction, division, multiply } = require('../computation');
+const {
+  add,
+  subtraction,
+  division,
+  multiply,
+  objectValuesToLowerCase
+} = require('../computation');
 
 describe('computation', () => {
   it('it should add two numbers', () => {
@@ -14,5 +20,10 @@ describe('computation', () => {
   });
   it('it should multiply two number', () => {
     expect(6, multiply(2, 3)).to.equal(6);
+  });
+  it('it should lower case all object keys', () => {
+    expect(objectValuesToLowerCase({ Name: 'Jamal' })).to.deep.equal({
+      Name: 'jamal'
+    });
   });
 });
