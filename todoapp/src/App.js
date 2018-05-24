@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import AddItem from './components/addItem';
 class App extends Component {
+  state = {
+    item: ''
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1 className="App-title">Welcome To My To Do App</h1>
+        <input
+          type="text"
+          onChange={e => {
+            this.setState({ item: e.target.value });
+          }}
+        />
+        <AddItem item={this.state.item} />
       </div>
     );
   }
