@@ -4,12 +4,12 @@ import './App.css';
 import AddItem from './components/addItem';
 class App extends Component {
   state = {
-    item: ''
+    item: []
   };
   render() {
     return (
       <div className="App">
-        <h1 className="App-title">Welcome To My To Do App</h1>
+        <h1 className="App-title">To Do App</h1>
         <input
           type="text"
           onChange={e => {
