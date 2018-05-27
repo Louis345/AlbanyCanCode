@@ -1,11 +1,16 @@
 import React from 'react';
 import './styles.css';
-const item = ({ item }) => {
-  return item ? (
-    <ul className="itemContainer">
-      <li className="item">{item}</li>
-    </ul>
-  ) : null;
+const displayList = props => {
+  console.log(props);
+  return props.items.map((item, idx) => {
+    return (
+      <ul key={idx} className="itemContainer">
+        <li className="item" onClick={() => props.removeItem(idx)}>
+          {item}
+        </li>
+      </ul>
+    );
+  });
 };
 
-export default item;
+export default displayList;
