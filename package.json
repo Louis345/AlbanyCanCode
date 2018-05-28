@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha"
   },
@@ -12,5 +11,8 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "nyc": "^11.8.0"
+  },
+  "dependencies": {
+    "uniq": "^1.0.1"
   }
 }

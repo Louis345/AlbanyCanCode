@@ -1,0 +1,13 @@
+<script>
+  const objectValuesToLowerCase = origObj => {
+    return Object.keys(origObj).reduce((newObj, key) => {
+      let val = origObj[key];
+      let newVal = typeof val === 'object' ? objectKeysToLowerCase(val) : val;
+      newObj[key] = newVal.toLowerCase();
+      debugger;
+      return newObj;
+    }, {});
+  };
+
+  const lowercasedObj = objectValuesToLowerCase({ firstName: 'Jamal', lastName: 'Taylor' });
+</script>
