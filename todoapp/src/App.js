@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AddItem from './components/addItem';
+import DisplayList from './components/displayList';
+
 class App extends Component {
   state = {
     items: [],
     userInput: ''
   };
+
   removeItem = selectedItemIndex => {
     const { items } = this.state;
     const updatedList = items.filter((item, idx) => {
@@ -16,14 +18,27 @@ class App extends Component {
       items: updatedList
     });
   };
+
   addItem = () => {
     this.setState({
       items: [...this.state.items, ...this.state.userInput]
     });
   };
+
+  displayList = () => {
+    return this.state.items.map((item, idx) => {
+      return (
+        <ul key={idx} className="itemContainer">
+          <li className="item" onClick={() => this.removeItem(idx)}>
+            {item}
+          </li>
+        </ul>
+      );
+    });
+  };
+
   render() {
     const { items } = this.state;
-    console.log(items);
     return (
       <div className="App">
         <h1>To Do App</h1>
@@ -35,6 +50,7 @@ class App extends Component {
             });
           }}
           value={this.state.userInput}
+          placeholder="Add your Item here"
         />
         <button
           onClick={() => {
@@ -46,7 +62,7 @@ class App extends Component {
         >
           Add Item
         </button>
-        <AddItem items={items} removeItem={this.removeItem} />
+        {this.displayList()}
       </div>
     );
   }

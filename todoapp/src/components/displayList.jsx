@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
 const displayList = props => {
-  console.log(props);
   return props.items.map((item, idx) => {
     return (
       <ul key={idx} className="itemContainer">

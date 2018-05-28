@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+ul {
+  -webkit-padding-start: 0;
+  margin-bottom: -11px;
+}
+
 .item {
   display: flex;
   border: 1px solid #ddd;
@@ -11,6 +16,5 @@
   height: 30px;
   border-radius: 20px;
   align-items: center;
-  width: 50%;
   text-align: center;
 }
