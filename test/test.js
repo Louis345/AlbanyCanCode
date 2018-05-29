@@ -1,10 +1,9 @@
 var expect = require('chai').expect;
-
+/** Need to import here */
 const {
   add,
   subtraction,
   division,
-  multiply,
   objectValuesToLowerCase
 } = require('../computation');
 
