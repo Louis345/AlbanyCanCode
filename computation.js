@@ -1,8 +1,7 @@
 const add = (a, b) => a + b;
 const subtraction = (a, b) => a - b;
 const division = (a, b) => a / b;
-
-/** write out the function */
+/** write out here the multiply function */
 
 const objectValuesToLowerCase = origObj => {
   return Object.keys(origObj).reduce((newObj, key) => {
@@ -12,7 +11,7 @@ const objectValuesToLowerCase = origObj => {
     return newObj;
   }, {});
 };
-/** Added Multiply to the module.exports */
+/** Added Multiply to the module.exports here */
 module.exports = {
   add,
   subtraction,
